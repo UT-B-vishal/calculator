@@ -3,95 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f4f4f4;
-        font-family: Arial, sans-serif;
-        margin: 0;
-      }
-      .calculator {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 300px;
-      }
-      .result {
-        width: 100%;
-        height: 50px;
-        text-align: right;
-        margin-bottom: 10px;
-        font-size: 1.5em;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 5px 10px;
-        box-sizing: border-box;
-      }
-      .buttons {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-      }
-      button {
-        padding: 20px;
-        font-size: 1.2em;
-        border: none;
-        background-color: #f0f0f0;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-      button:hover {
-        background-color: #ddd;
-      }
-      button.zero {
-        grid-column: span 2;
-      }
-      button:active {
-        background-color: #bbb;
-      }
-    </style>
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="calculator">
-      <input type="text" id="result" class="result" disabled />
-      <div class="buttons">
-        <button onclick="handleInput('C')">C</button>
-        <button onclick="handleInput('/')">/</button>
-        <button onclick="handleInput('*')">*</button>
-        <button onclick="handleInput('-')">-</button>
-        <button onclick="handleInput('7')">7</button>
-        <button onclick="handleInput('8')">8</button>
-        <button onclick="handleInput('9')">9</button>
-        <button onclick="handleInput('+')">+</button>
-        <button onclick="handleInput('4')">4</button>
-        <button onclick="handleInput('5')">5</button>
-        <button onclick="handleInput('6')">6</button>
-        <button onclick="handleInput('=')">=</button>
-        <button onclick="handleInput('1')">1</button>
-        <button onclick="handleInput('2')">2</button>
-        <button onclick="handleInput('3')">3</button>
-        <button onclick="handleInput('0')" class="zero">0</button>
-      </div>
+    <div class=" common-page" >
+      <button onclick="window.location.href='index.html'" type="button" class="btn btn-primary">Calculator</button>
+      <button onclick="window.location.href='todo.html'" type="button" class="btn btn-secondary">TO Do List</button>
     </div>
-    <script>
-      let input = "";
-      function isValidExpression(expr) {
-        return /^[\d+\-*/.() ]+$/.test(expr);
-      }
-      function handleInput(value) {
-        const resultField = document.getElementById("result");
-        if (value === "C") input = "";
-        else if (value === "=")
-          input = isValidExpression(input) ? eval(input) : "Error";
-        else input += value;
-        resultField.value = input;
-      }
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
